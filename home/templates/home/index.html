@@ -1,0 +1,168 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="ko">-->
+<!--<style>-->
+<!--    @import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');-->
+<!--    @import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&family=Gowun+Dodum&display=swap');-->
+<!--</style>-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width,initial-scale=1">-->
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">-->
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>-->
+<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>-->
+<!--</head>-->
+<!--<body>-->
+<!--<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top" style="font-family: 'Gowun Dodum', sans-serif;">-->
+<!--    <ul class="navbar-nav">-->
+<!--        <li class="home">-->
+<!--            <a class="nav-link" href="http://127.0.0.1:8000/home/">홈</a>-->
+<!--        </li>-->
+<!--        <li class="trashcanmap">-->
+<!--            <a class="nav-link" href="http://127.0.0.1:8000/map/">쓰레기통 지도</a>-->
+<!--        </li>-->
+<!--        <li class="guidepage">-->
+<!--            <a class="nav-link" href="http://127.0.0.1:8000/guide/" id="navbardrop" data-toggle="dropdown">재활용 가이드</a>-->
+<!--            <div class="dropdown-menu">-->
+<!--                <a class="dropdown-item" href="http://127.0.0.1:8000/guide/">가이드</a>-->
+<!--&lt;!&ndash;                <a class="dropdown-item" href="http://127.0.0.1:8000/guide/paper">종이</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                <a class="dropdown-item" href="http://127.0.0.1:8000/guide/plastic">플라스틱</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                <a class="dropdown-item" href="http://127.0.0.1:8000/guide/metal">고철</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                <a class="dropdown-item" href="http://127.0.0.1:8000/guide/vinyl">비닐</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                <a class="dropdown-item" href="http://127.0.0.1:8000/guide/glass">유리</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                <a class="dropdown-item" href="http://127.0.0.1:8000/guide/styrofoam">스티로폼</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                <a class="dropdown-item" href="http://127.0.0.1:8000/guide/etc">그 외 </a>&ndash;&gt;-->
+<!--                <a class="dropdown-item" href="http://127.0.0.1:8000/guide/guidelist">분리수거 어떻게?</a>-->
+<!--            </div>-->
+<!--        </li>-->
+<!--        <li class="AI">-->
+<!--            <a class="nav-link" href="http://127.0.0.1:8000/ai/">그래프</a>-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--</nav>-->
+<!--{% block content %}-->
+
+<!--    {% endblock %}-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+{% load static %}
+
+<html lang="zxx"><head>
+  <meta charset="utf-8">
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{%static 'plugins/bootstrap/bootstrap.min.css'%}">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="{%static 'plugins/slick/slick.css'%}">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="{%static 'plugins/themify-icons/themify-icons.css'%}">
+
+  <!-- Main Stylesheet -->
+  <link href="{%static 'css/style.css'%}" rel="stylesheet">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="{%static 'beginimages/favicon.ico'%}" type="image/x-icon">
+  <link rel="icon" href="{%static 'beginimages/favicon.ico'%}" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!--    <script src="./js/jquery-latest.js"></script>-->
+<!--<style>-->
+
+<!--#introWrap{-->
+<!--position: fixed; left: 50%; top: 50%; transform:translate(-50%,-50%); z-index: 1;-->
+
+<!--}-->
+<!--</style>-->
+</head>
+
+<body>
+<!--<script>-->
+<!--try{-->
+<!--  // 인트로에서 메인 이동-->
+<!--  var introWrapBurIndex = 0;-->
+<!--  setTimeout(function(){-->
+<!--   var introWrapBur = setInterval(function(){-->
+<!--    introWrapBurIndex = introWrapBurIndex+1;-->
+
+<!--    if(introWrapBurIndex < 14){-->
+<!--     $("#introWrap").css("filter","blur("+introWrapBurIndex+"px)");-->
+<!--     $("#introWrap").css("-ms-filter","blur("+introWrapBurIndex+"px)");-->
+<!--     $("#introWrap").css("-moz-filter","blur("+introWrapBurIndex+"px)");-->
+<!--     $("#introWrap").css("-webkit-filter","blur("+introWrapBurIndex+"px)");-->
+<!--    } else if(introWrapBurIndex == 14){-->
+<!--     $("#introWrap").hide();-->
+<!--    } else if(introWrapBurIndex == 25){-->
+<!--     clearInterval(introWrapBur);-->
+<!--     $("#wrap").show();-->
+<!--    }-->
+<!--   },50);-->
+<!--   }, 3000);-->
+<!-- }catch(err){-->
+<!--  $("#introWrap").hide();-->
+<!--  $("#wrap").show();-->
+<!-- }-->
+
+<!--</script>-->
+<!--<div id="introWrap"><img src="{%static 'beginimages/loading.gif'%}"></div>-->
+
+
+<header class="navigation sticky-top nav-bg">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-center" id="navigation">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="http://127.0.0.1:8000/home">home</a>
+
+
+
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="http://127.0.0.1:8000/map">map</a>
+              </li>
+<!--        <li class="nav-item">-->
+<!--            <a class="nav-link" href="http://127.0.0.1:8000/guide" id="navbardrop" data-toggle="dropdown">guide</a>-->
+<!--            <div class="dropdown-item">-->
+<!--                <a class="dropdown-item" href="http://127.0.0.1:8000/guide/">재활용 가이드</a>-->
+<!--                <a class="dropdown-item" href="http://127.0.0.1:8000/guide/guidelist">분리수거 어떻게?</a>-->
+<!--            </div>-->
+<!--        </li>-->
+              <li class="nav-item dropdown">
+<!--              <li class="dropdown">-->
+                  <a class="nav-link"  href="http://127.0.0.1:8000/guide/" class="dropdown-toggle" data-toggle="dropdown">guide<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                      <li><a class="nav-link" style="color:black" href="http://127.0.0.1:8000/guide/">guide</a></li>
+                      <li><a class="nav-link" style="color:black" href="http://127.0.0.1:8000/guide/guidelist">How to recycle?</a></li>
+                  </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+<!--              <li class="dropdown">-->
+                  <a class="nav-link"  href="http://127.0.0.1:8000/ai/seoul" class="dropdown-toggle" data-toggle="dropdown">graph<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                      <li><a class="nav-link" style="color:black" href="http://127.0.0.1:8000/ai/seoul">seoul</a></li>
+                      <li><a class="nav-link" style="color:black" href="http://127.0.0.1:8000/ai">kwangmeong</a></li>
+                  </ul>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="http://127.0.0.1:8000/address">address</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
+</header>
+</body></html>

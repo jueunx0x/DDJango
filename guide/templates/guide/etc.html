@@ -1,0 +1,16 @@
+{% load static %}
+
+<head>
+
+</head>
+<body>
+{% include "home/index.html" %}
+{% block content %}
+<img src="{%static 'imgphoto/appliance_guide.jpg'%}" alt="guidephoto" style="margin-left: auto; margin-right: auto; display: block;">
+<img src="{%static 'imgphoto/etc_guide.jpg'%}" alt="guidephoto" style="margin-left: auto; margin-right: auto; display: block;">
+<img src="{%static 'imgphoto/foodwaste_guide.jpg'%}" alt="guidephoto" style="margin-left: auto; margin-right: auto; display: block;">
+<img src="{%static 'imgphoto/foodwaste2_guide.jpg'%}" alt="guidephoto" style="margin-left: auto; margin-right: auto; display: block;">
+<img src="{%static 'imgphoto/hazardouswaste_guide.jpg'%}" alt="guidephoto" style="margin-left: auto; margin-right: auto; display: block;">
+<img src="{%static 'imgphoto/hazardouswaste2_guide.jpg'%}" alt="guidephoto" style="margin-left: auto; margin-right: auto; display: block;">
+{% endblock %}
+</body>

@@ -1,0 +1,110 @@
+{% load static %}
+{% include "home/index.html" %}
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&family=Gowun+Dodum&display=swap');
+.searchbox{
+  width: 79%;
+  margin: 10px auto;
+
+
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Gowun Dodum', sans-serif;
+}
+
+.header{
+  background: #6c5da1;
+  overflow: hidden;
+  padding: 10px;
+  text-align: center;
+  border-radius:10px
+}
+.header h3{
+  text-transform: uppercase;
+  color: white;
+  margin: 0;
+  margin-bottom: 8px;
+}
+#value{
+  font-family: 'Gaegu', cursive;
+  border: none;
+  background: #262943;
+  padding: 6px;
+  font-size: 18px;
+  width: 80%;
+  border-radius: 6px;
+  color: white;
+  text-align:center;
+}
+#value:focus{
+  outline: none;
+}
+.container{
+
+  background: #7b6caf;
+  padding: 1%;
+  border-radius:6px;
+}
+.item{
+  margin: 1.5% 0px;
+  display: flex;
+  justify-content: center;
+  item-align:center;
+}
+.name{
+  font-size: 20px;
+  font-weight: 470;
+  color: white;
+}
+
+</style>
+<script type="text/javascript">
+      function filter(){
+
+        var value, name, item, i;
+
+        value = document.getElementById("value").value;
+        item = document.getElementsByClassName("item");
+
+        for(i=0;i<item.length;i++){
+          name = item[i].getElementsByClassName("name");
+          if(name[0].innerHTML.indexOf(value) > -1){
+            item[i].style.display = "flex";
+          }else{
+            item[i].style.display = "None";
+          }
+        }
+      }
+</script>
+<body>
+    <div class="searchbox">
+          <div class="header">
+            <h3>검색창</h3>
+            <input onkeyup="filter()" type="text" id="value" placeholder="Type to Search">
+          </div>
+<!--        <div class="container my-3">-->
+<!--    <table class="table">-->
+<!--        <thead>-->
+<!--        <tr class="thead-dark">-->
+<!--            <th>쓰레기 이름</th>-->
+<!--            <th>분리배출 종류</th>-->
+<!--            <th>분리배출 방법</th>-->
+<!--        </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--        </tbody>-->
+<!--    </table>-->
+<!--        </div>-->
+          <div class="container" >
+              {% for i in recycle_detail %}
+              <div class="item">
+                  <span class="name">{{i.Name}}:{{i.kinds}}({{i.way}})</span>
+              </div>
+              {% endfor %}
+          </div>
+
+    </div>
+</body>

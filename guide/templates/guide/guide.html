@@ -1,0 +1,52 @@
+{% load static %}
+
+<head>
+
+</head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<style>
+#btn_group{position:fixed;width:90px;}
+#btn_group button{  background-color: rgba(0,0,0,0); color: black; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px;}
+
+#btn_group button:hover{ color:white; background-color: black; }
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&family=Gowun+Dodum&display=swap');
+</style>
+<script>
+    function fnMove(seq){
+        var offset = $("#div" + seq).offset();
+        $('html, body').animate({scrollTop : offset.top}, 400);
+    }
+</script>
+
+<body>
+{% include "home/index.html" %}
+<div id="btn_group" style="font-family: 'Gowun Dodum', sans-serif;">
+<button id="guide_btn" onclick="fnMove('1')">전체가이드</button>
+<button id="paper_btn" onclick="fnMove('2')">종이</button>
+<button id="glass_btn" onclick="fnMove('3')">유리</button>
+<button id="metal_btn" onclick="fnMove('4')">고철</button>
+<button id="plastic_btn" onclick="fnMove('5')">플라스틱</button>
+<button id="styrofoam_btn" onclick="fnMove('6')">스티로폼</button>
+<button id="vinyl_btn" onclick="fnMove('7')">비닐</button>
+<button id="etc_btn" onclick="fnMove('8')">그 외</button>
+    </div>
+<div id="div1"><img src="{%static 'imgphoto/guidephoto.png'%}" alt="guidephoto" style="margin-left: auto; margin-right: auto; display: block;"></div>
+<div id="div2"><img src="{%static 'imgphoto/paper_guide.jpg'%}" alt="guidephoto" style="margin-left: auto; margin-right: auto; display: block;">
+    <img src="{%static 'imgphoto/packandcup__guide.jpg'%}" alt="guidephoto" style="margin-left: auto; margin-right: auto; display: block;"></div>
+<div id="div3"><img src="{%static 'imgphoto/glass_guide.jpg'%}" alt="guidephoto" style="margin-left: auto; margin-right: auto; display: block;"></div>
+<div id="div4"><img src="{%static 'imgphoto/canandscrap_guide.jpg'%}" alt="guidephoto" style="margin-left: auto; margin-right: auto; display: block;"></div>
+<div id="div5"><img src="{%static 'imgphoto/petplastic_guide.jpg'%}" alt="guidephoto" style="margin-left: auto; margin-right: auto; display: block;"></div>
+<div id="div6"><img src="{%static 'imgphoto/styrofoam_guide.jpg'%}" alt="guidephoto" style="margin-left: auto; margin-right: auto; display: block;"></div>
+<div id="div7"><img src="{%static 'imgphoto/vinyl_guide.jpeg'%}" alt="guidephoto" style="margin-left: auto; margin-right: auto; display: block;"></div>
+<div id="div8"><img src="{%static 'imgphoto/etc_guide.jpg'%}" alt="guidephoto" style="margin-left: auto; margin-right: auto; display: block;">
+    <img src="{%static 'imgphoto/foodwaste_guide.jpg'%}" alt="guidephoto" style="margin-left: auto; margin-right: auto; display: block;">
+    <img src="{%static 'imgphoto/foodwaste2_guide.jpg'%}" alt="guidephoto" style="margin-left: auto; margin-right: auto; display: block;">
+    <img src="{%static 'imgphoto/hazardouswaste_guide.jpg'%}" alt="guidephoto" style="margin-left: auto; margin-right: auto; display: block;">
+    <img src="{%static 'imgphoto/hazardouswaste2_guide.jpg'%}" alt="guidephoto" style="margin-left: auto; margin-right: auto; display: block;"></div>
+<!--    <div>-->
+<!--        <img src="{%static 'imgphoto/appliance_guide.jpg'%}" alt="guidephoto" style="margin-left: auto; margin-right: auto; display: block;">-->
+<!--    </div>-->
+{% block content %}
+{% endblock %}
+
+</body>
